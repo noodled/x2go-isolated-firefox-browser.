@@ -42,7 +42,7 @@ Name=keyboard
 Exec=setxkbmap be
 StartupNotify=false
 Terminal=false
-EOF
+EOL
 
 echo enabling SSHd password auth
 sed -i s'/^#?PasswordAuthentication/PasswordAuthentication yes/'g /etc/ssh/sshd_config
