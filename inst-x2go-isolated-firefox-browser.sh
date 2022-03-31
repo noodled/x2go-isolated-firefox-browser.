@@ -19,8 +19,8 @@ sudo apt install -y ./google-chrome-stable_current_amd64.deb
 
 export sudolla=atkinson
 echo creating user $sudolla
-sudo adduser --disabled-password --gecos "" -m -s /bin/bash atkinson
-usermod -aG sudo atkinson
+sudo adduser --disabled-password --gecos "" --shell /bin/bash $sudolla
+usermod -aG sudo $sudolla
 mkdir -p /home/atkinson/.config/autostart
 mv /home/atkinson/.config /home/atkinson/.config-old
 
