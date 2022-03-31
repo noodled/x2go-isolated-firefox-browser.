@@ -12,7 +12,7 @@ sudo apt-get -y update
 sudo apt-get install --no-install-recommends -y x2goserver x2goserver-xsession
       
 pushd ~
-curlUA=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.60 Safari/537.36
+curlUA='Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.60 Safari/537.36'
 curlparam=--referer=www.google.com -L --ipv4 -#
 curl -A "curlUA" "https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb" $curlparam -o google-chrome-stable_current_amd64.deb
 sudo apt install -y ./google-chrome-stable_current_amd64.deb
@@ -28,10 +28,10 @@ echo "$sudolla ALL=(ALL) NOPASSWD: ALL" | sudo tee /etc/sudoers.d/dont-prompt-$s
 echo $sudolla will be your sudoer user
     
 echo   Put customized config (Xfce panel setup, Chrome profile with smooth scrolling disabled)
-cp -r homedir/{{ item }} /home/atkinson && chown -R atkinson:atkinson /home/atkinson/{{ item }}"
+## cp -r homedir/{{ item }} /home/atkinson && chown -R atkinson:atkinson /home/atkinson/{{ item }}"
 
-cp -r homedir/.config /home/atkinson && chown -R atkinson:atkinson /home/atkinson/.config
-cp -r homedir/.local /home/atkinson && chown -R atkinson:atkinson /home/atkinson/.local
+## cp -r homedir/.config /home/atkinson && chown -R atkinson:atkinson /home/atkinson/.config
+## cp -r homedir/.local /home/atkinson && chown -R atkinson:atkinson /home/atkinson/.local
 
 echo setting BElgian keyb
 
