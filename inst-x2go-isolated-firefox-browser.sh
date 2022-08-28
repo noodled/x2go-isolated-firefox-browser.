@@ -49,8 +49,8 @@ sed -i s'/^#?PasswordAuthentication/PasswordAuthentication yes/'g /etc/ssh/sshd_
 systemctl restart ssh
 
 pushd ~
-curl -A "curlUA" "https://download.nomachine.com/download/7.9/Linux/nomachine_7.9.2_1_amd64.deb" $curlparam -o nomachine_7.9.2_1_amd64.deb
-sudo apt install -y ./nomachine_7.9.2_1_amd64.deb
+curl -A "curlUA" "https://download.nomachine.com/download/7.10/Linux/nomachine_7.10.1_1_amd64.deb" $curlparam -o nomachine_7.10.1_1_amd64.deb
+sudo apt install -y ./nomachine_7.10.1_1_amd64.deb
 cp /usr/NX/etc/node.cfg /usr/NX/etc/node.cfg-spare-autostart-Xsession
 sed -i s'@^DefaultDesktopCommand "/etc/X11/Xsession default"@DefaultDesktopCommand "/usr/bin/X11/startxfce4"@'g /usr/NX/etc/node.cfg
 
